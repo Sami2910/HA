@@ -1,0 +1,14 @@
+1)Goto HDFS/Click on HDFS Cluster
+2)In Status click on Actions
+3)Enable HIGH AVAILABILITY
+4)Give namservice & Continue
+5)On Assign Host Page
+   1)NameNodeHost -> Select SNN Host
+   2)JNHost       -> Select 3 Master Node
+   & Continue
+6)On Review Changes Page
+   1)Directory For Metadata : /dfs/nn
+   2)Directory For JN       : /jn
+   & Continue
+7)It will show COngratulations! Successfully enabled HA.
+  & Finish
