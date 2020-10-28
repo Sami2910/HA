@@ -1,1 +1,11 @@
-
+1) Goto HIVE Service
+2) GO to instances
+3) Click on Actions
+4) Add Role Instances
+   1) HiveMetastore -> Select Master Host
+   & Continue
+   & Finish
+4) Restart Service
+   &Restart Stale Service
+   &Restart Now
+   &Finish
