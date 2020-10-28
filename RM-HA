@@ -1,0 +1,13 @@
+1) Goto YARN(MR2 Included)
+2) Click on Actions
+3) Enable HIGH AVAILABILITY
+   1)RM Hosts -> Select 1 Master Host
+   & Continue
+   & Finish
+4) Click on Configuration
+5) In Filters
+   1) Scope     -> CLick on Job History Server
+   2) Category  -> Advanced
+        Automatically Restart Process ✅ JHS 
+                                      ✅ NM
+        &Save Changes
