@@ -1,0 +1,5 @@
+1) Stop Cluster (Stop&Close)
+2) Stop CMS     (Stop&Close)
+3) Stop CM from command line (On CM Host)
+  $ sudo service cloudera-scm-server status
+  $ sudo service cloudera-scm-server stop
