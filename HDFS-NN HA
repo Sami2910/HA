@@ -10,5 +10,42 @@
    1)Directory For Metadata : /dfs/nn
    2)Directory For JN       : /jn
    & Continue
-7)It will show COngratulations! Successfully enabled HA.
+7)It will show Congratulations! Successfully enabled HA.
   & Finish
+
+
+## Dependent Services
+
+####Pointing Hue Service to NameService(Where edits&fsimg are located)####
+
+1) Go to instances
+2) Click on Actions
+3) Add Role instances
+4) Click on httpFS
+      Put on any master node & continue
+5) Tick httpFS
+6) Actions for selected
+7) Start & Start
+   1) Click on Hue Service
+   2) Go under Configuration
+        i) HDFS WebInterfaceRole -> HttpFS (Select This)
+                                 -> NameNode
+                                 -> NameNode
+           &save changes
+   3) Click on status ( Will show Restart symbol)
+   4) Restart Stale Services
+   5) Restart Now
+   6) Finish
+   
+####Dependent Service Hive####
+
+1) Stop Service Hue (Stop&Close)
+2) Stop Service Oozie (Stop&Close)
+3) Stop Service Hive (Stop&Close)
+4) Click on Hive
+5) Click on Actions
+6) Click on Update Hive Metastore Namenodes(Update&Close)
+7) Now one by one start all the services
+   1) Start Service Hue (Start&Close)
+   2) Start Service Oozie (Start&Close)
+   3) Start Service Hive (Start&Close)
