@@ -1,3 +1,8 @@
+*********************************************
+	HDFS/NN High Availability
+*********************************************
+
+
 1)Goto HDFS/Click on HDFS Cluster
 2)In Status click on Actions
 3)Enable HIGH AVAILABILITY
