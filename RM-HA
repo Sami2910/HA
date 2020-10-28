@@ -1,3 +1,7 @@
+*********************************************
+	ResourceManager High Availability
+*********************************************
+
 1) Goto YARN(MR2 Included) Service
 2) Click on Actions
 3) Enable HIGH AVAILABILITY
