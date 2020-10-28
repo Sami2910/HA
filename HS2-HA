@@ -12,26 +12,46 @@ sudo apt-get install libmysql-java
 sudo cp /usr/share/java/mysql-connector-java-5.1.28.jar /opt/cloudera/parcels/CDH-5.14.0-1.cdh5.14.0.p0.24/lib/hive/lib/
 
 
-### Go to Hive -> Instances -> Add role instances -> Hiveserver2
-Start the HS2 instance
+### 
+1) Go to Hive 
+2) Instances 
+3) Click on Actions
+4) Add role instances
+	1) HiveServer2 -> Select Master Host
+	&continue
+5) Tick Hiveserver2
+6) Actions for Selected
+	1)Start 
+	&Start 
+	&Close
 
 
 
 ### Enable Dyanamic service discovery
 
-In Hive -> Configuration -> Category - Advanced 
-Search -> hiveserver2 Advanced Configuration snippet 
+1) In Hive service 
+2) Go to Configuration 
+	1) Category -> Select Advanced 
+	   Search -> hiveserver2 Advanced Configuration snippet 
 
-Under "HiveServer2 Advanced Configuration Snippet (Safety Valve) for hive-site.xml"
-Name : hive.server2.support.dynamic.service.discovery
-Value : true
-(Leave final unchecked)
+3) Under "HiveServer2 Advanced Configuration Snippet (Safety Valve) for hive-site.xml"
+		Name : hive.server2.support.dynamic.service.discovery
+		Value : true
+		(Leave final ☐ unchecked)
+		&Save Changes
+4) Restart Service
+   &Restart Stale Service
+   &Restart Now
+   &Finish
 
 
-### Connect through beeline
+## Connect to one of the DN to check its working or not
+### Connect through beeline (command for HA)
 
 beeline
-!connect jdbc:hive2://ip-172-31-18-254.ec2.internal:2181,ip-172-31-23-42.ec2.internal:2181,ip-172-31-17-83.ec2.internal:2181/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2
+!connect jdbc:hive2://privateDNS:2181,ip-172-31-23-42.ec2.internal:2181,ip-172-31-17-83.ec2.internal:2181/;serviceDiscoveryMode=zooKeeper;zooKeeperNamespace=hiveserver2
 
 
 
+##Command for Normally Connect to Beeline
+!connect jdbc:hive2://privateDNSofHS2:10000
